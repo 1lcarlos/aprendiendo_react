@@ -1,6 +1,11 @@
-export function TwitterFollowCard({userName, name, isFollowwing}) {
-  console.log(isFollowwing)
-    return (
+export function TwitterFollowCard({
+  children,
+  format,
+  userName,
+  isFollowwing,
+}) {
+  console.log(isFollowwing);
+  return (
     <article className="tw-followCard">
       <header className="tw-followCard-header">
         <img
@@ -9,8 +14,8 @@ export function TwitterFollowCard({userName, name, isFollowwing}) {
           alt="Avatar del usuario"
         />
         <div className="tw-followCard-info">
-          <strong>{name}</strong>
-          <span className="tw-followCard-infoUserName">@{userName}</span>
+          <strong>{children}</strong>
+          <span className="tw-followCard-infoUserName">{format(userName)}</span>
         </div>
       </header>
 
