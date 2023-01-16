@@ -6,32 +6,16 @@ export function App() {
   return (
     <>
       <section className="App">
-        <TwitterFollowCard
-          isFollowwing={false}
-          format={fortmatUserName}
-          userName="Antonio"
-        >
+        <TwitterFollowCard format={fortmatUserName} userName="Antonio">
           Antonio Jose Jimenez
         </TwitterFollowCard>
-        <TwitterFollowCard
-          isFollowwing
-          format={fortmatUserName}
-          userName="lcarlos"
-        >
+        <TwitterFollowCard format={fortmatUserName} userName="lcarlos">
           Luis Carlos Ramirez
         </TwitterFollowCard>
-        <TwitterFollowCard
-          isFollowwing
-          format={fortmatUserName}
-          userName="ElonMusk"
-        >
+        <TwitterFollowCard format={fortmatUserName} userName="ElonMusk">
           Elon musk
         </TwitterFollowCard>
-        <TwitterFollowCard
-          isFollowwing
-          format={fortmatUserName}
-          userName="Kata"
-        >
+        <TwitterFollowCard format={fortmatUserName} userName="Kata">
           Katalina Butista
         </TwitterFollowCard>
       </section>
