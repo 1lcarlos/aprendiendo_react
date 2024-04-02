@@ -1,11 +1,10 @@
 import "./App.css";
-import repuestaPeliculas from "./mocks/resultados.json";
-import sinRespuesta from "./mocks/sinResultados.json";
+import { usePeliculas } from "./hooks/usePeliculas.js";
 import { Peliculas } from "./components/peliculas.jsx";
 
 function App() {
-  const peliculas = repuestaPeliculas.Search;
-  
+  const { peliculas: mapeoPeliculas } = usePeliculas();
+
   return (
     <div className="page">
       <header>
@@ -16,7 +15,7 @@ function App() {
         </form>
       </header>
       <main>
-        <Peliculas peliculas ={peliculas}/>
+        <Peliculas peliculas={mapeoPeliculas} />
       </main>
     </div>
   );
